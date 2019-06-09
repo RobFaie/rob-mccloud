@@ -1,0 +1,21 @@
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-16.04'
+
+steps:
+- checkout: self
+  clean: true
+  submodules: recursive
+  persistCredentials: true
+
+- script: |
+    AUTH=$(git config http.$(Build.Repository.Uri).extraheader)
+    cd public
+    git checkout master
+    docker run --rm -v $(System.DefaultWorkingDirectory):/src jguyomard/hugo-builder hugo --gc --minify
+    git add .
+    git -c "user.name=$(Build.RequestedFor)" -c "user.email=$(Build.RequestedForEmail)" commit -m "CICD: $(Build.BuildNumber)"
+    git -c http.extraheader="$AUTH" push
