@@ -116,7 +116,7 @@ steps:
   persistCredentials: true
 ```
 
-Now comes the meat of the pipeline. Firstly we want to grab the credentials that Azure Pipelines has left for us and store it in a variable for later. Inside the public folder we checkout master so that we aren't on a detached head and have the latest commit for clean diffs.
+Now comes the meat of the pipeline. Firstly we want to grab the credentials that Azure Pipelines has left for us and store it in a variable for later. Inside the public folder we checkout master so that we aren't on a detached head and have the latest commit for clean diffs. I have then chosen to delete all contents so that any removed posts or tags are cleaned up fully.
 
 Next we issue the same Docker command as earlier simply replacing the `$PWD` in the volume argument with `$(System.DefaultWorkingDirectory)` which points to the root of our source code repo.
 
@@ -129,8 +129,11 @@ All that is left is to commit the changes and push them. We need to provide a `u
     AUTH=$(git config http.$(Build.Repository.Uri).extraheader)
     cd public
     git checkout master
+    rm -rf *
     docker run --rm -v $(System.DefaultWorkingDirectory):/src jguyomard/hugo-builder hugo --gc --minify
     git add .
+    git reset -- CNAME
+    git reset -- README.md
     git -c "user.name=$(Build.RequestedFor)" -c "user.email=$(Build.RequestedForEmail)" commit -m "CICD: $(Build.BuildNumber)"
     git -c http.extraheader="$AUTH" push
 ```
@@ -154,8 +157,11 @@ steps:
     AUTH=$(git config http.$(Build.Repository.Uri).extraheader)
     cd public
     git checkout master
+    rm -rf *
     docker run --rm -v $(System.DefaultWorkingDirectory):/src jguyomard/hugo-builder hugo --gc --minify
     git add .
+    git reset -- CNAME
+    git reset -- README.md
     git -c "user.name=$(Build.RequestedFor)" -c "user.email=$(Build.RequestedForEmail)" commit -m "CICD: $(Build.BuildNumber)"
     git -c http.extraheader="$AUTH" push
 ```
