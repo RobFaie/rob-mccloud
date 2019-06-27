@@ -15,7 +15,10 @@ steps:
     AUTH=$(git config http.$(Build.Repository.Uri).extraheader)
     cd public
     git checkout master
+    rm -rf *
     docker run --rm -v $(System.DefaultWorkingDirectory):/src jguyomard/hugo-builder hugo --gc --minify
     git add .
+    git reset -- CNAME
+    git reset -- README.md
     git -c "user.name=$(Build.RequestedFor)" -c "user.email=$(Build.RequestedForEmail)" commit -m "CICD: $(Build.BuildNumber)"
     git -c http.extraheader="$AUTH" push
