@@ -1,13 +1,13 @@
 ---
 title: "About Rob"
-date: 2019-06-10T17:15:00+10:00
+date: 2020-05-04T17:27:00+10:00
 draft: false
 ---
 
 
-Melbourne based DevOps Engineer at [Readify].
+Melbourne based Senior Developer at [Telstra Purple].
 
-I work in the Tech Telstra Platforms team enabling all of [Readify] & [Kloud] by automating everything and ensuring our people have the tools they need to succeed. The team is growing so [join.readify.net][JoinLink]
+I work in the Telstra Purple DevSecOps team enabling all of [Telstra Purple] by automating everything and ensuring our people have the tools they need to succeed. The team is growing so [join.purple.telstra.com][JoinLink]
 
 Daily Toolchain:
 
@@ -18,12 +18,12 @@ Daily Toolchain:
 
 Qualifications:
 
+- Microsoft Certified: Azure Administrator Associate
 - Bachelor's of Computer Science at [Monash]
 - Diploma of Software Development at [Holmesglen]
 
-[Readify]: https://readify.net
-[Kloud]: https://kloud.com.au
-[JoinLink]: https://join.readify.net/?Source=StaffReferral&Campaign=robert.mcleod
+[Telstra Purple]: https://purple.telstra.com/
+[JoinLink]: https://join.purple.telstra.com/?Source=StaffReferral&Campaign=robert.mcleod
 [Holmesglen]: https://holmesglen.edu.au/
 [Monash]: https://www.monash.edu/
 [Azure]: https://azure.microsoft.com/en-gb/
