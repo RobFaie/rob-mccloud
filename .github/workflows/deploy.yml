@@ -1,0 +1,40 @@
+
+name: CI/CD
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: recursive
+
+    - name: Hugo setup
+      uses: peaceiris/actions-hugo@v2.4.11
+
+    - name: Build
+      run: hugo --minify
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        external_repository: RobFaie/robfaie.github.io
+        publish_branch: master
+        publish_dir: ./public
+        force_orphan: true
+        cname: rob-mc.cloud
+
+    - name: notification
+      if: cancelled() == false
+      uses: xinthink/action-telegram@v1.1
+      with:
+        botToken: ${{ secrets.BotToken }}
+        chatId: ${{ secrets.ChatID }}
+        jobStatus: ${{ job.status }}
+        skipSuccess: false

@@ -1,17 +1,16 @@
-# rob-mccloud [![Build Status][BuildImage]][BuildUrl]
+# rob-mccloud ![CI/CD][GHImage]
 
 
 My personal website: <https://rob-mc.cloud>
 
 - Framework: [Hugo][Hugo]
 - Theme: [Hermit][Hermit]
-- CI: [Azure Pipelines][AzPipes]
+- CI: [Github Actions][GHActions]
 - Hosted: [GitHub Pages][GHPages]
 
 
-[BuildImage]: https://dev.azure.com/rob-mccloud/rob-mc.cloud/_apis/build/status/RobFaie.rob-mccloud?branchName=master
-[BuildUrl]: https://dev.azure.com/rob-mccloud/rob-mc.cloud/_build/latest?definitionId=2&branchName=master
 [Hermit]: https://github.com/Track3/hermit
 [Hugo]: https://gohugo.io/
 [GHPages]: https://pages.github.com/
-[AzPipes]: https://azure.microsoft.com/en-us/services/devops/pipelines/
+[GHActions]: https://github.com/features/actions/
+[GHImage]: https://github.com/RobFaie/rob-mccloud/workflows/CI/CD/badge.svg
