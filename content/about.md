@@ -22,6 +22,10 @@ Qualifications:
 - Bachelor's of Computer Science at [Monash]
 - Diploma of Software Development at [Holmesglen]
 
+Badges:
+
+{{< badges >}}
+
 [Telstra Purple]: https://purple.telstra.com/
 [JoinLink]: https://join.purple.telstra.com/?Source=StaffReferral&Campaign=robert.mcleod
 [Holmesglen]: https://holmesglen.edu.au/
