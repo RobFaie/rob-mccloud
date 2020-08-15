@@ -78,3 +78,8 @@ disqusShortname = "rob-mc-cloud"
     name = "About"
     url = "about/"
     weight = 20
+
+  [[menu.main]]
+    name = "Resume"
+    url = "resume"
+    weight = 30
