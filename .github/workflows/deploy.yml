@@ -15,7 +15,7 @@ jobs:
         submodules: recursive
 
     - name: Hugo setup
-      uses: peaceiris/actions-hugo@v2.4.11
+      uses: peaceiris/actions-hugo@v2.5.0
 
     - name: Build
       run: hugo --minify
