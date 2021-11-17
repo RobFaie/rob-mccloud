@@ -5,20 +5,18 @@ draft: false
 ---
 
 
-Melbourne based Senior Developer at [Telstra Purple].
+Melbourne based Senior Systems Engineer at [Phocas Software].
 
-I work in the Telstra Purple DevSecOps team enabling all of [Telstra Purple] by automating everything and ensuring our people have the tools they need to succeed. The team is growing so [join.purple.telstra.com][JoinLink]
+I work in the Phocas Software IT team enabling all of [Phocas Software] by automating everything and ensuring our people have the tools they need to succeed.
 
 Daily Toolchain:
 
 - [Visual Studio Code]
 - [GitKraken]
-- [Azure]
-- [PowerShell Core]
+- [Workato]
 
 Qualifications:
 
-- Microsoft Certified: Azure Administrator Associate
 - Bachelor's of Computer Science at [Monash]
 - Diploma of Software Development at [Holmesglen]
 
@@ -26,11 +24,11 @@ Badges:
 
 {{< badges >}}
 
-[Telstra Purple]: https://purple.telstra.com/
-[JoinLink]: https://join.purple.telstra.com/?Source=StaffReferral&Campaign=robert.mcleod
+[Phocas Software]: https://www.phocassoftware.com/
 [Holmesglen]: https://holmesglen.edu.au/
 [Monash]: https://www.monash.edu/
 [Azure]: https://azure.microsoft.com/en-gb/
 [GitKraken]: https://www.gitkraken.com/
 [PowerShell Core]: https://github.com/powershell/powershell
 [Visual Studio Code]: https://code.visualstudio.com/
+[Workato]: https://www.workato.com/
